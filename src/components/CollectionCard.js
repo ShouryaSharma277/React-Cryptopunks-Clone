@@ -1,5 +1,5 @@
 import React from "react";
-import weth from "/home/user/react-nft-challenge/src/assets/weth.png";
+import weth from "../assets/weth.png";
 import "./collectionCard.css";
 
 export const CollectionCard = ({ id, name, traits, image }) => {
