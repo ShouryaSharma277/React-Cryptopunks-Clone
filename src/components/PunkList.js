@@ -4,7 +4,7 @@ import "./punkList.css";
 
 export const PunkList = ({ punkListData, setSelectedPunk }) => {
   return (
-    <div className="punkList">
+    <div className="punkList cursor-pointer flex overflow-scroll border-t-white mt-5 py-5">
       {punkListData.map((punk) => (
         <div onClick={() => setSelectedPunk(punk.token_id)}>
           <CollectionCard
