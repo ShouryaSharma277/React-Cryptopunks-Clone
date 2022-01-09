@@ -6,8 +6,8 @@ import { PunkList } from "./components/PunkList";
 import { Main } from "./components/Main";
 
 function App() {
-  const [ punkListData, setPunkListData ] = useState([]);
-  const [ selectedPunk, setSelectedPunk ] = useState(0);
+  const [punkListData, setPunkListData] = useState([]);
+  const [selectedPunk, setSelectedPunk] = useState(0);
 
   useEffect(() => {
     const getMyNfts = async () => {
@@ -21,16 +21,17 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div className="app bg-black">
       <Header />
-      {
-        punkListData.length > 0 && (
-          <div>
+      {punkListData.length > 0 && (
+        <div>
           <Main punkListData={punkListData} selectedPunk={selectedPunk} />
-          <PunkList punkListData={punkListData} setSelectedPunk={setSelectedPunk} />
-          </div>
-        )
-      }
+          <PunkList
+            punkListData={punkListData}
+            setSelectedPunk={setSelectedPunk}
+          />
+        </div>
+      )}
     </div>
   );
 }
